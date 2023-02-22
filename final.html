@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<style>
+    h1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    input[type=text],
+    select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    input[type=submit] {
+        width: 100%;
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    input[type=]:hover {
+        background-color: #45a049;
+    }
+
+    div {
+        border-radius: 5px;
+        background-color: #8875bb;
+        width: 300px;
+        border: 15px solid rgb(255, 255, 255);
+        padding: 50px;
+        margin: 20px;
+        
+
+    }
+</style>
+
+<body>
+
+    <div>
+        <form action="/action_page.php">
+            <h1>Insert data</h1>
+            <label for="firstName">ชื่อ:</label>
+            <input type="text" id="firstName" name="firstName">
+
+            <label for="lastName">นามสกุล:</label>
+            <input type="text" id="lastName" name="lastName">
+
+            <label for="gender">เพศ:</label>
+            <select id="gender" name="gender">
+                <option value="male">ชาย</option>
+                <option value="female">หญิง</option>
+                <option value="other">ไม่ระบุ</option>
+            </select>
+
+            <label for="birthday">วันเกิด:</label>
+            <input type="date" id="birthday" name="birthday">
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <script>
+        function insertData() {
+            const firstName = document.getElementById("firstName").value;
+            const lastName = document.getElementById("lastName").value;
+            const gender = document.getElementById("gender").value;
+            const birthday = document.getElementById("birthday").value;
+            console.log("First Name: " + firstName);
+            console.log("Last Name: " + lastName);
+            console.log("Gender: " + gender);
+            console.log("Birthday: " + birthday);
+            alert("Data submitted successfully!");
+        }
+    </script>
+
+</body>
+
+</html>
+
+<html>
+
+<head>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 1px solid #0b0b0b;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+
+        #data th {
+            background-color: violet;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table>
+        <tr id="data">
+            <th>ชื่อ</th>
+            <th>นามสกุล</th>
+            <th>เพศ</th>
+            <th>วันเกิด</th>
+            </tr1>
+        <tr>
+            <td>วินนี่</td>
+            <td>เดอะพูห์</td>
+            <td>หญิง</td>
+            <td>2003-05-14</td>
+        </tr>
+        <tr>
+            <td>จิงจิง</td>
+            <td>จริงใจ</td>
+            <td>ไม่ระบุ</td>
+            <td>2001-04-06</td>
+        </tr>
+
+    </table>
+
+</body>
+
+</html>
